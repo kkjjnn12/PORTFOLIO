@@ -1,0 +1,237 @@
+* General container */
+.skills-container {
+  padding: 60px 20px;
+  background-color: #000; /* Black background */
+  color: #fff; /* White text */
+  position: relative; /* Allow positioning of the bubbles */
+  overflow: hidden; /* Hide bubbles that go outside */
+}
+
+/* Floating Colorful Bubbles */
+@keyframes bubbleAnimation {
+  0% {
+    transform: translateY(60vh) scale(0.3); /* Start from the bottom */
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(30vh) scale(1);
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateY(0) scale(0.3); /* End at the top */
+    opacity: 0;
+  }
+}
+
+.bubble {
+  position: absolute;
+  border-radius: 50%;
+  animation: bubbleAnimation 10s ease-out infinite;
+  opacity: 0;
+}
+
+/* Colorful bubbles with different sizes, colors, and animation delays */
+.bubble:nth-child(1) {
+  width: 30px;
+  height: 30px;
+  background-color: rgba(255, 99, 132, 0.8); /* Pink */
+  left: 10%;
+  animation-delay: 0s;
+}
+
+.bubble:nth-child(2) {
+  width: 25px;
+  height: 25px;
+  background-color: rgba(54, 162, 235, 0.8); /* Blue */
+  left: 40%;
+  animation-delay: 1s;
+}
+
+.bubble:nth-child(3) {
+  width: 20px;
+  height: 20px;
+  background-color: rgba(75, 192, 192, 0.8); /* Green */
+  left: 70%;
+  animation-delay: 2s;
+}
+
+.bubble:nth-child(4) {
+  width: 35px;
+  height: 35px;
+  background-color: rgba(255, 159, 64, 0.8); /* Orange */
+  left: 15%;
+  animation-delay: 3s;
+}
+
+.bubble:nth-child(5) {
+  width: 40px;
+  height: 40px;
+  background-color: rgba(255, 205, 86, 0.8); /* Yellow */
+  left: 60%;
+  animation-delay: 4s;
+}
+
+.bubble:nth-child(6) {
+  width: 30px;
+  height: 30px;
+  background-color: rgba(153, 102, 255, 0.8); /* Purple */
+  left: 80%;
+  animation-delay: 5s;
+}
+
+.bubble:nth-child(7) {
+  width: 25px;
+  height: 25px;
+  background-color: rgba(255, 159, 64, 0.8); /* Orange */
+  left: 50%;
+  animation-delay: 6s;
+}
+
+.bubble:nth-child(8) {
+  width: 40px;
+  height: 40px;
+  background-color: rgba(75, 192, 192, 0.8); /* Green */
+  left: 30%;
+  animation-delay: 7s;
+}
+
+.bubble:nth-child(9) {
+  width: 20px;
+  height: 20px;
+  background-color: rgba(54, 162, 235, 0.8); /* Blue */
+  left: 20%;
+  animation-delay: 8s;
+}
+
+.bubble:nth-child(10) {
+  width: 25px;
+  height: 25px;
+  background-color: rgba(255, 99, 132, 0.8); /* Pink */
+  left: 10%;
+  animation-delay: 9s;
+}
+
+/* Title */
+.title {
+  font-size: 2.5rem;
+  color: #fff;
+  font-weight: bold;
+  margin-bottom: 40px;
+}
+
+/* Layout for the row */
+.row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.col-md-6 {
+  flex: 1;
+  padding: 10px;
+}
+
+/* Skill Container */
+.skill {
+  text-align: center;
+  margin-bottom: 30px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+/* Skill image icon */
+.skill-icon {
+  width: 70px;
+  height: 70px;
+  object-fit: cover;
+  margin-bottom: 15px;
+  transition: transform 0.3s ease;
+}
+
+/* Hover effect */
+.skill:hover {
+  transform: scale(1.1);
+}
+
+.skill-icon:hover {
+  transform: scale(1.2);
+}
+
+/* Progress Bar Container */
+.progress {
+  width: 100%;
+  background-color: #333; /* Dark progress bar background */
+  border-radius: 20px;
+  overflow: hidden;
+  height: 10px;
+  margin-top: 10px;
+  position: relative;
+}
+
+/* Progress Bar */
+.progress-bar {
+  height: 100%;
+  background-color: purple; /* Green color for progress */
+  border-radius: 20px;
+  transition: width 0.6s ease;
+  position: relative;
+}
+
+/* Display the percentage inside the progress bar */
+.progress-percentage {
+  position: absolute;
+  top: -20px;  /* Position it above the progress bar */
+  left: 50%;
+  transform: translateX(-50%);
+  color: #fff;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: color 0.5s ease;
+}
+
+/* Apply purple color when the animation is active */
+.progress-percentage.purple {
+  color: #9b4dff;  /* Purple color for active percentage */
+}
+
+/* Animation for active skill progress bar */
+.progress-bar.animate {
+  animation: progressAnimation 1s forwards;
+}
+
+@keyframes progressAnimation {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+/* Text styling for skills */
+.skill p {
+  font-size: 1.1rem;
+  color: #fff;
+  margin-bottom: 5px;
+  font-weight: 600;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .row {
+    flex-direction: column;
+  }
+
+  .col-md-6 {
+    margin-bottom: 20px;
+  }
+
+  .skill-icon {
+    width: 50px;
+    height: 50px;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+}
+

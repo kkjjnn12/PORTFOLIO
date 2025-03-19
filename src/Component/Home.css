@@ -1,0 +1,92 @@
+.home-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  position: relative;
+  background: linear-gradient(45deg, #ff9a9e, #fad0c4, #fbc2eb, #a18cd1);
+  height: 100vh;
+  overflow: hidden;
+}
+
+.shooting-star {
+  position: absolute;
+  background: #fff;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  opacity: 0.8;
+  animation: fall 10s infinite linear;
+}
+
+@keyframes fall {
+  0% {
+    transform: translateY(-100px) translateX(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh) translateX(50vw);
+    opacity: 0;
+  }
+}
+
+.left-side {
+  flex: 1;
+  padding: 40px;
+  color: #333;
+}
+
+.welcome-text {
+  font-size: 3rem;
+  font-weight: 600;
+  color: #4e4e4e;
+  margin-bottom: 10px;
+}
+
+.hi-text {
+  font-size: 2rem;
+  font-weight: 300;
+  color: #ff7b00;
+}
+
+.intro-text {
+  font-size: 1.5rem;
+  margin-top: 15px;
+  color: #555;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+.explore-button {
+  display: inline-block;
+  padding: 12px 30px;
+  background-color: #ff7b00;
+  color: white;
+  border-radius: 30px;
+  margin-top: 20px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+.explore-button:hover {
+  background-color: #e75b00;
+}
+
+.right-side {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile-image {
+  border-radius: 50%;
+  border: 4px solid #ff7b00;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+}
+
+.profile-image:hover {
+  transform: scale(1.05);
+}

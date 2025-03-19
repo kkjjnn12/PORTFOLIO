@@ -1,0 +1,106 @@
+ /* Navbar Styles */
+ .navbar {
+  background-color: #333; /* Dark background color for the navbar */
+  background-size: cover; /* Make the image cover the entire navbar */
+  background-position: center; /* Center the background image */
+  padding: 10px 0; /* Padding around the navbar */
+  position: sticky; /* Keeps navbar fixed at the top while scrolling */
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+/* Navbar Container Styles */
+.navbar-container {
+  display: flex; /* Use flexbox to align items */
+  justify-content: space-between; /* Space out the logo and links */
+  align-items: center; /* Vertically center the navbar items */
+  max-width: 1200px; /* Max width for the navbar */
+  margin: 0 auto; /* Center the navbar container */
+  padding: 0 20px; /* Horizontal padding */
+}
+
+/* Logo container styles */
+.logo-container {
+  display: flex;
+  align-items: center; /* Vertically align image and text */
+}
+
+/* Logo styling */
+.logo {
+  color: white; /* White color for the logo */
+  font-size: 24px; /* Adjusted font size */
+  font-weight: bold;
+  text-transform: uppercase; /* Uppercase for logo */
+  letter-spacing: 2px; /* Space between letters */
+  margin-left: 10px; /* Optional space between image and text */
+}
+
+/* Navbar Links Styling */
+.nav-links {
+  list-style: none; /* Remove default list styling */
+  display: flex; /* Display links in a row */
+}
+
+/* Navbar item styles */
+.nav-item {
+  margin-left: 20px; /* Space between items */
+}
+
+/* Styling for the links */
+.nav-item a {
+  color: white; /* White color for links */
+  text-decoration: none; /* Remove underline from links */
+  font-size: 18px; /* Font size for the links */
+  font-weight: 500;
+  transition: color 0.3s ease; /* Smooth transition on hover */
+}
+
+/* Hover effect for links */
+.nav-item a:hover {
+  color: #f1f1f1; /* Light color when hovered */
+}
+
+/* Mobile View Styling */
+@media screen and (max-width: 768px) {
+  .navbar-container {
+    flex-direction: column; /* Stack navbar items vertically on small screens */
+    align-items: flex-start; /* Align items to the left on small screens */
+  }
+
+  .nav-links {
+    display: none; /* Hide navbar links by default on small screens */
+    flex-direction: column; /* Stack links vertically */
+    margin-top: 20px; /* Margin above links */
+  }
+
+  .nav-item {
+    margin-left: 0;
+    margin-bottom: 10px; /* Add space between links */
+  }
+
+  .nav-item a {
+    font-size: 20px; /* Larger font size for mobile */
+  }
+
+  .navbar.active .nav-links {
+    display: flex; /* Show navbar links when navbar is active */
+  }
+
+  .navbar .toggle-button {
+    display: block; /* Show hamburger menu on small screens */
+    background-color: #333;
+    border: none;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+  }
+
+  .toggle-button span {
+    background-color: white;
+    display: block;
+    height: 3px;
+    width: 25px;
+    margin: 5px auto;
+  }
+}
